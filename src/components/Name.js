@@ -1,6 +1,6 @@
 import React from 'react';
 import { reduxForm } from 'redux-form';
-import { connect } from 'react-redux';
+//import { connect } from 'react-redux';
 
 const Name = (props) => {
     const { handleSubmit, previousPage } = props;
@@ -9,12 +9,12 @@ const Name = (props) => {
             <div className="building-block">
                 <label className="name-block-label">
                     Character Name</label>
-                <input type="text" className="name-input" value={props.currentName} onInput={e => props.changeName(e)}>
-                </input>
-
+                    <input type="text" className="name-input" value={props.currentName} onChange={e => props.changeName(e)}>
+                    </input>
+                
                 <div className="buttons">
                     <button type="button" className="previous" onClick={previousPage}>Previous</button>
-                    <button type="submit" className="next">Next</button>
+                    <button type="submit" className="next" onClick={e => console.log("Current Name: " + props.currentName)}>Next</button>
                 </div>
             </div>
         </form>

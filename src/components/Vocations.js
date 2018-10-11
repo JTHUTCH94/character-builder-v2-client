@@ -1,8 +1,8 @@
 import React from 'react';
-import { Field, reduxForm } from 'redux-form';
+import { reduxForm } from 'redux-form';
 
 const Vocations = (props) => {
-    const { handleSubmit, previousPage, changeVocation} = props;
+    const { handleSubmit, previousPage} = props;
 
     if(props.currentVocation === "n/a"){
     return (
@@ -17,7 +17,7 @@ const Vocations = (props) => {
                 <p className="currentChoice">Current Vocation: {props.currentVocation}</p>
                 <div className="buttons">
                 <button type="button" className="previous" onClick={previousPage}>Previous</button>
-                <button type="submit" className="next">Next</button>
+                <button type="submit" className="next" onClick={e => console.log("Current Vocation: " + props.currentVocation)}>Next</button>
             </div>
             </div>
         </form>
@@ -38,7 +38,7 @@ const Vocations = (props) => {
                 </div>
                 <div className="buttons">
                 <button type="button" className="previous" onClick={previousPage}>Previous</button>
-                <button type="submit" className="next">Next</button>
+                <button type="submit" className="next" onClick={e => console.log("Current Vocation: " + props.currentVocation)}>Next</button>
             </div>
             </div>
         </form>
@@ -59,7 +59,7 @@ const Vocations = (props) => {
                 </div>
                 <div className="buttons">
                 <button type="button" className="previous" onClick={previousPage}>Previous</button>
-                <button type="submit" className="next">Next</button>
+                <button type="submit" className="next" onClick={e => console.log("Current Vocation: " + props.currentVocation)}>Next</button>
             </div>
             </div>
         </form>
@@ -80,7 +80,7 @@ const Vocations = (props) => {
                 </div>
                 <div className="buttons">
                 <button type="button" className="previous" onClick={previousPage}>Previous</button>
-                <button type="submit" className="next">Next</button>
+                <button type="submit" className="next" onClick={e => console.log("Current Vocation: " + props.currentVocation)}>Next</button>
             </div>
             </div>
         </form>

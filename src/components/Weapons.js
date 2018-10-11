@@ -1,8 +1,8 @@
 import React from 'react';
-import { Field, reduxForm } from 'redux-form';
+import { reduxForm } from 'redux-form';
 
 const Weapons = (props) => {
-    const { handleSubmit, previousPage, changeWeapon} = props;
+    const { handleSubmit, previousPage} = props;
 
     if(props.currentWeapon === "n/a"){
     return (
@@ -17,7 +17,7 @@ const Weapons = (props) => {
                 <p className="currentChoice">Current Weapon: {props.currentWeapon}</p>
                 <div className="buttons">
                 <button type="button" className="previous" onClick={previousPage}>Previous</button>
-                <button type="submit" className="next">Next</button>
+                <button type="submit" className="next" onClick={e => console.log("Current Weapon: " + props.currentWeapon)}>Next</button>
             </div>
             </div>
         </form>
@@ -38,7 +38,7 @@ const Weapons = (props) => {
                 </div>
                 <div className="buttons">
                 <button type="button" className="previous" onClick={previousPage}>Previous</button>
-                <button type="submit" className="next">Next</button>
+                <button type="submit" className="next" onClick={e => console.log("Current Weapon: " + props.currentWeapon)}>Next</button>
             </div>
             </div>
         </form>
@@ -58,7 +58,7 @@ const Weapons = (props) => {
                     <p className="currentChoice">Current Choice: {props.currentWeapon}</p>
                 </div>                <div className="buttons">
                 <button type="button" className="previous" onClick={previousPage}>Previous</button>
-                <button type="submit" className="next">Next</button>
+                <button type="submit" className="next" onClick={e => console.log("Current Weapon: " + props.currentWeapon)}>Next</button>
             </div>
             </div>
         </form>
@@ -78,7 +78,7 @@ const Weapons = (props) => {
                     <p className="currentChoice">Current Choice: {props.currentWeapon}</p>
                 </div>                <div className="buttons">
                 <button type="button" className="previous" onClick={previousPage}>Previous</button>
-                <button type="submit" className="next">Next</button>
+                <button type="submit" className="next" onClick={e => console.log("Current Weapon: " + props.currentWeapon)}>Next</button>
             </div>
             </div>
         </form>
