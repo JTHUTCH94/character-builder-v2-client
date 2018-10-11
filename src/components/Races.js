@@ -1,5 +1,5 @@
 import React from 'react';
-import { Field, reduxForm } from 'redux-form';
+import { reduxForm } from 'redux-form';
 
 const Races = (props) => {
     const { handleSubmit, previousPage} = props;
@@ -17,7 +17,7 @@ const Races = (props) => {
                 <p className="currentChoice">Current Race: {props.currentRace}</p>
                 <div className="buttons">
                 <button type="button" className="previous" onClick={previousPage}>Previous</button>
-                <button type="submit" className="next">Next</button>
+                <button type="submit" className="next" onClick={e => console.log("Current Race: " + props.currentRace)}>Next</button>
             </div>
             </div>
         </form>
@@ -38,7 +38,7 @@ const Races = (props) => {
                 </div>
                 <div className="buttons">
                 <button type="button" className="previous" onClick={previousPage}>Previous</button>
-                <button type="submit" className="next">Next</button>
+                <button type="submit" className="next" onClick={e => console.log("Current Race: " + props.currentRace)}>Next</button>
             </div>
             </div>
         </form>
@@ -59,7 +59,7 @@ const Races = (props) => {
                 </div>
                 <div className="buttons">
                 <button type="button" className="previous" onClick={previousPage}>Previous</button>
-                <button type="submit" className="next">Next</button>
+                <button type="submit" className="next" onClick={e => console.log("Current Race: " + props.currentRace)}>Next</button>
             </div>
             </div>
         </form>
@@ -80,7 +80,7 @@ const Races = (props) => {
                 </div>
                 <div className="buttons">
                 <button type="button" className="previous" onClick={previousPage}>Previous</button>
-                <button type="submit" className="next">Next</button>
+                <button type="submit" className="next" onClick={e => console.log("Current Race: " + props.currentRace)}>Next</button>
             </div>
             </div>
         </form>

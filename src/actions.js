@@ -35,10 +35,10 @@ export const createCharacterAction = (e) => dispatch => {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-            "name": e.target.name.value,
-            "race": e.target.race.value,
-            "vocation": e.target.vocation.value,
-            "weapon": e.target.weapon.value
+            "currentName": e.target.currentName.value,
+            "currentRace": e.target.currentRace.value,
+            "currentVocation": e.target.currentVocation.value,
+            "currentWeapon": e.target.currentWeapon.value
         })
     })
         .then(res => res.json())

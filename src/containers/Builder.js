@@ -5,7 +5,7 @@ import Races from '../components/Races';
 import Vocations from '../components/Vocations';
 import Weapons from '../components/Weapons';
 import CharacterCard from '../components/CharacterCard';
-import { setName, setRace } from '../actions';
+//import { setName, setRace, setVocation, setWeapon } from '../actions';
 
 class Builder extends Component {
   constructor(props) {
@@ -48,7 +48,7 @@ class Builder extends Component {
       this.setState({ currentWeapon: e.target.value})
   }
 
-
+  
   render() {
     const { onSubmit } = this.props;
     const { page } = this.state;
